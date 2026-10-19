@@ -5,10 +5,10 @@ header.top{position:relative;z-index:2}
 .hero>*:not(.hero-bg){position:relative;z-index:1}
 .hero-bg{position:absolute;z-index:0;top:-7rem;bottom:0;left:calc(50% - 50vw);width:100vw;overflow:hidden;pointer-events:none;background:#000}
 .hero-bg img{display:block;width:100%;height:100%;object-fit:contain;object-position:right center}  /* contain keeps the empty left safe area under the text at any aspect */
-/* scrim: solid black under the text column, fading out over the art */
+/* light scrim: SVG already leaves the left safe; keep text readable without burying the art */
 .hero-bg::after{content:"";position:absolute;inset:0;background:
- linear-gradient(90deg,#000 0%,rgba(0,0,0,.94) 50%,rgba(0,0,0,.6) 64%,rgba(0,0,0,0) 84%),
- linear-gradient(0deg,var(--bg) 0%,rgba(10,10,10,0) 18%)}
+ linear-gradient(90deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.25) 38%,rgba(0,0,0,0) 58%),
+ linear-gradient(0deg,var(--bg) 0%,rgba(10,10,10,0) 12%)}
 .hero::before{display:none}  /* old glow replaced by the art */
 .hero .hair{display:none}
 @media (max-width:900px){
