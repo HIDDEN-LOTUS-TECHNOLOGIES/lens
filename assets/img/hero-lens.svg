@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-hidden="true">
+<style><![CDATA[
+:root{--w:#E9E4D4;--u:#6FA8DC;--b:#8C7FA8;--r:#D9725B;--g:#6FAF7A;--acc:#F7931A;--ink:#0a0a0a;--mut:#6a6a6a}
+.stage{fill:#000}
+.grid{stroke:#1a1a1a;stroke-width:1;opacity:.55}
+.rail{fill:none;stroke:#2a2a2a;stroke-width:1.5}
+.tick{fill:#3a3a3a}
+.mono{font:600 18px ui-monospace,Consolas,monospace;fill:#7a7a7a;letter-spacing:.12em}
+.stat{font:700 15px ui-monospace,Consolas,monospace;fill:#9a9a9a;letter-spacing:.08em}
+.stat .v{fill:var(--acc)}
+.bezel{fill:none;stroke:#c8c8c8;stroke-width:14;opacity:.9}
+.bezel-in{fill:none;stroke:#3a3a3a;stroke-width:3}
+.glass{fill:url(#glassFill);opacity:.22}
+.glint{fill:var(--acc);opacity:.95}
+.handle{fill:#1c1c1c;stroke:#4a4a4a;stroke-width:2}
+.pack{rx:14;ry:14;stroke:#222;stroke-width:1.5}
+.bar{height:8}
+.pip{r:5}
+.hud{fill:#111;stroke:#2a2a2a;stroke-width:1}
+.lab{font:600 13px ui-monospace,Consolas,monospace;fill:#8a8a8a;letter-spacing:.14em}
+.num{font:800 28px ui-monospace,Consolas,monospace;fill:#ececec}
+/* color cycle: W U B R G  ~12s loop; reduced-motion parks on U (#2 / UB) */
+.f{opacity:0}
+.f1{animation:cycle 12s steps(1,end) infinite}
+.f2{animation:cycle 12s steps(1,end) infinite;animation-delay:-2.4s}
+.f3{animation:cycle 12s steps(1,end) infinite;animation-delay:-4.8s}
+.f4{animation:cycle 12s steps(1,end) infinite;animation-delay:-7.2s}
+.f5{animation:cycle 12s steps(1,end) infinite;animation-delay:-9.6s}
+@keyframes cycle{0%,19.9%{opacity:1}20%,100%{opacity:0}}
+.loupe{animation:drift 18s ease-in-out infinite}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(10px,-8px)}}
+.scan{animation:scan 6s linear infinite}
+@keyframes scan{to{stroke-dashoffset:-120}}
+@media (prefers-reduced-motion:reduce){
+.loupe,.scan{animation:none}
+.f{opacity:0!important}
+.f2{opacity:1!important} /* U frame  UB pair */
+}
+]]></style>
+<defs>
+  <radialGradient id="glassFill" cx="42%" cy="35%" r="65%">
+    <stop offset="0%" stop-color="#fff" stop-opacity=".55"/>
+    <stop offset="45%" stop-color="#6FA8DC" stop-opacity=".12"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+  </radialGradient>
+  <clipPath id="lensClip"><circle cx="1120" cy="430" r="248"/></clipPath>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="1.2"/>
+  </filter>
+</defs>
+
+<!-- full black; left stays empty for text scrim -->
+<rect class="stage" width="1600" height="900"/>
+
+<!-- faint lab grid on the art side only -->
+<g opacity=".7">
+  <path class="grid" d="M760 40h800M760 100h800M760 160h800M760 220h800M760 280h800M760 340h800M760 400h800M760 460h800M760 520h800M760 580h800M760 640h800M760 700h800M760 760h800M760 820h800"/>
+  <path class="grid" d="M820 0v900M880 0v900M940 0v900M1000 0v900M1060 0v900M1120 0v900M1180 0v900M1240 0v900M1300 0v900M1360 0v900M1420 0v900M1480 0v900M1540 0v900"/>
+</g>
+
+<!-- pick rail -->
+<g transform="translate(820 780)">
+  <path class="rail" d="M0 0h520"/>
+  <circle class="tick" cx="0" cy="0" r="3"/>
+  <circle class="tick" cx="104" cy="0" r="3"/>
+  <circle class="tick" cx="208" cy="0" r="3"/>
+  <circle class="tick" cx="312" cy="0" r="4" fill="#F7931A"/>
+  <circle class="tick" cx="416" cy="0" r="3"/>
+  <circle class="tick" cx="520" cy="0" r="3" fill="none" stroke="#5a5a5a"/>
+  <text class="mono" x="0" y="28">// LOCAL</text>
+  <text class="mono" x="280" y="28" fill="#F7931A">P1P1</text>
+</g>
+
+<!-- loupe group (right) -->
+<g class="loupe">
+  <!-- handle -->
+  <rect class="handle" x="1325" y="620" width="28" height="150" rx="10" transform="rotate(38 1339 695)"/>
+  <rect class="handle" x="1348" y="740" width="22" height="70" rx="8" transform="rotate(38 1359 775)"/>
+
+  <!-- outer bezel -->
+  <circle class="bezel" cx="1120" cy="430" r="262"/>
+  <circle class="bezel-in" cx="1120" cy="430" r="252"/>
+  <circle class="glass" cx="1120" cy="430" r="248"/>
+  <circle class="glint" cx="980" cy="300" r="7" filter="url(#soft)"/>
+
+  <!-- contents inside glass -->
+  <g clip-path="url(#lensClip)">
+    <rect x="860" y="170" width="520" height="520" fill="#050505"/>
+
+    <!-- five color frames of pack stack -->
+    <g class="f f1">
+      <rect class="pack" x="980" y="250" width="280" height="120" fill="#E9E4D4"/>
+      <rect class="pack" x="1000" y="300" width="280" height="120" fill="#cfc9b8"/>
+      <rect class="pack" x="1020" y="350" width="280" height="120" fill="#b8b29f"/>
+      <circle class="pip" cx="1045" cy="390" fill="#E9E4D4"/><circle class="pip" cx="1065" cy="390" fill="#6FA8DC"/><circle class="pip" cx="1085" cy="390" fill="#8C7FA8"/><circle class="pip" cx="1105" cy="390" fill="#D9725B"/><circle class="pip" cx="1125" cy="390" fill="#6FAF7A"/>
+      <rect class="bar" x="1160" y="382" width="100" height="8" fill="#222" rx="2"/><rect x="1160" y="382" width="72" height="8" fill="#F7931A" rx="2"/>
+      <text class="lab" x="1040" y="480">W · SIGNAL</text>
+    </g>
+    <g class="f f2">
+      <rect class="pack" x="980" y="250" width="280" height="120" fill="#6FA8DC"/>
+      <rect class="pack" x="1000" y="300" width="280" height="120" fill="#5a91c4"/>
+      <rect class="pack" x="1020" y="350" width="280" height="120" fill="#8C7FA8"/>
+      <circle class="pip" cx="1045" cy="390" fill="#E9E4D4"/><circle class="pip" cx="1065" cy="390" fill="#6FA8DC"/><circle class="pip" cx="1085" cy="390" fill="#8C7FA8"/><circle class="pip" cx="1105" cy="390" fill="#D9725B"/><circle class="pip" cx="1125" cy="390" fill="#6FAF7A"/>
+      <rect class="bar" x="1160" y="382" width="100" height="8" fill="#222" rx="2"/><rect x="1160" y="382" width="84" height="8" fill="#F7931A" rx="2"/>
+      <text class="lab" x="1040" y="480">UB · OPEN</text>
+    </g>
+    <g class="f f3">
+      <rect class="pack" x="980" y="250" width="280" height="120" fill="#8C7FA8"/>
+      <rect class="pack" x="1000" y="300" width="280" height="120" fill="#746890"/>
+      <rect class="pack" x="1020" y="350" width="280" height="120" fill="#5e5378"/>
+      <circle class="pip" cx="1045" cy="390" fill="#E9E4D4"/><circle class="pip" cx="1065" cy="390" fill="#6FA8DC"/><circle class="pip" cx="1085" cy="390" fill="#8C7FA8"/><circle class="pip" cx="1105" cy="390" fill="#D9725B"/><circle class="pip" cx="1125" cy="390" fill="#6FAF7A"/>
+      <rect class="bar" x="1160" y="382" width="100" height="8" fill="#222" rx="2"/><rect x="1160" y="382" width="58" height="8" fill="#F7931A" rx="2"/>
+      <text class="lab" x="1040" y="480">B · CUT</text>
+    </g>
+    <g class="f f4">
+      <rect class="pack" x="980" y="250" width="280" height="120" fill="#D9725B"/>
+      <rect class="pack" x="1000" y="300" width="280" height="120" fill="#c05e48"/>
+      <rect class="pack" x="1020" y="350" width="280" height="120" fill="#a44c3a"/>
+      <circle class="pip" cx="1045" cy="390" fill="#E9E4D4"/><circle class="pip" cx="1065" cy="390" fill="#6FA8DC"/><circle class="pip" cx="1085" cy="390" fill="#8C7FA8"/><circle class="pip" cx="1105" cy="390" fill="#D9725B"/><circle class="pip" cx="1125" cy="390" fill="#6FAF7A"/>
+      <rect class="bar" x="1160" y="382" width="100" height="8" fill="#222" rx="2"/><rect x="1160" y="382" width="46" height="8" fill="#F7931A" rx="2"/>
+      <text class="lab" x="1040" y="480">R · PRESS</text>
+    </g>
+    <g class="f f5">
+      <rect class="pack" x="980" y="250" width="280" height="120" fill="#6FAF7A"/>
+      <rect class="pack" x="1000" y="300" width="280" height="120" fill="#5a9a66"/>
+      <rect class="pack" x="1020" y="350" width="280" height="120" fill="#488454"/>
+      <circle class="pip" cx="1045" cy="390" fill="#E9E4D4"/><circle class="pip" cx="1065" cy="390" fill="#6FA8DC"/><circle class="pip" cx="1085" cy="390" fill="#8C7FA8"/><circle class="pip" cx="1105" cy="390" fill="#D9725B"/><circle class="pip" cx="1125" cy="390" fill="#6FAF7A"/>
+      <rect class="bar" x="1160" y="382" width="100" height="8" fill="#222" rx="2"/><rect x="1160" y="382" width="90" height="8" fill="#F7931A" rx="2"/>
+      <text class="lab" x="1040" y="480">G · WHEEL</text>
+    </g>
+
+    <!-- scan line -->
+    <circle cx="1120" cy="430" r="230" fill="none" stroke="#F7931A" stroke-opacity=".25" stroke-width="1.5" stroke-dasharray="8 14" class="scan"/>
+  </g>
+
+  <!-- HUD chips outside glass, still on art side -->
+  <g transform="translate(1388 210)">
+    <rect class="hud" width="150" height="64" rx="6"/>
+    <text class="lab" x="14" y="22">GIH WR</text>
+    <text class="num" x="14" y="50">61.4<span class="stat" style="font-size:14px;fill:#8a8a8a">%</span></text>
+  </g>
+  <g transform="translate(1388 288)">
+    <rect class="hud" width="150" height="64" rx="6"/>
+    <text class="lab" x="14" y="22">ALSA</text>
+    <text class="num" x="14" y="50">2.18</text>
+  </g>
+  <g transform="translate(1388 366)">
+    <rect class="hud" width="150" height="64" rx="6"/>
+    <text class="lab" x="14" y="22">OH WR</text>
+    <text class="num" x="14" y="50">58.4<span class="stat" style="font-size:14px;fill:#8a8a8a">%</span></text>
+  </g>
+
+  <!-- mini curve -->
+  <g transform="translate(860 560)">
+    <text class="lab" x="0" y="0">CURVE</text>
+    <rect x="0" y="40" width="18" height="28" fill="#2a2a2a"/>
+    <rect x="26" y="18" width="18" height="50" fill="#F7931A"/>
+    <rect x="52" y="28" width="18" height="40" fill="#3a3a3a"/>
+    <rect x="78" y="36" width="18" height="32" fill="#2a2a2a"/>
+    <rect x="104" y="48" width="18" height="20" fill="#222"/>
+    <rect x="130" y="52" width="18" height="16" fill="#1a1a1a"/>
+  </g>
+</g>
+</svg>

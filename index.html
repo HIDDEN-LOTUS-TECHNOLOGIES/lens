@@ -20,6 +20,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/jost-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/hero-underlay.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -33,6 +34,7 @@
 
 <main id="main">
 <section class="hero" style="border-top:0" aria-labelledby="t">
+  <div class="hero-bg" aria-hidden="true"><img src="assets/img/hero-lens.svg" alt="" width="1600" height="900" decoding="async"></div>
   <p class="sys">// Lab project · Transmission 001</p>
   <h1 id="t">Lotus Lens<i>.</i></h1>
   <p class="lede">An open-source MTG Arena draft copilot. Draft, build, play and debrief, on your own machine.</p>
@@ -41,10 +43,6 @@
     <a class="btn solid" href="#install">Install <span class="soon" style="color:var(--bg);border-color:var(--bg)">Soon</span></a>
     <a class="btn" href="#what">What it does</a>
   </div>
-  <div class="hair" aria-hidden="true"></div>
-  <figure class="hero-art">
-    <img src="assets/img/hero-lens.jpg" alt="Abstract lens framing stylized draft packs, local pick rail and mana curve" width="1600" height="900" decoding="async">
-  </figure>
 </section>
 
 <section id="what" aria-labelledby="what-h">

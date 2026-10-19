@@ -1,0 +1,20 @@
+/* Lotus Lens hero underlay: animated SVG behind header + hero text */
+html,body{overflow-x:clip}
+header.top{position:relative;z-index:2}
+.hero{position:relative;isolation:isolate;min-height:min(46rem,92vh)}
+.hero>*:not(.hero-bg){position:relative;z-index:1}
+.hero-bg{position:absolute;z-index:0;top:-7rem;bottom:0;left:calc(50% - 50vw);width:100vw;overflow:hidden;pointer-events:none;background:#000}
+.hero-bg img{display:block;width:100%;height:100%;object-fit:contain;object-position:right center}  /* contain keeps the empty left safe area under the text at any aspect */
+/* scrim: solid black under the text column, fading out over the art */
+.hero-bg::after{content:"";position:absolute;inset:0;background:
+ linear-gradient(90deg,#000 0%,rgba(0,0,0,.94) 50%,rgba(0,0,0,.6) 64%,rgba(0,0,0,0) 84%),
+ linear-gradient(0deg,var(--bg) 0%,rgba(10,10,10,0) 18%)}
+.hero::before{display:none}  /* old glow replaced by the art */
+.hero .hair{display:none}
+@media (max-width:900px){
+ /* push the art down + right, below the CTA; keep text over plain black */
+ .hero{min-height:0;padding-bottom:min(58vw,30rem)}
+ .hero-bg{top:auto;height:min(62vw,32rem);bottom:0}
+ .hero-bg img{object-fit:cover;object-position:78% center;opacity:.8}
+ .hero-bg::after{background:linear-gradient(180deg,var(--bg) 0%,rgba(10,10,10,0) 30%,rgba(10,10,10,0) 80%,var(--bg) 100%)}
+}
