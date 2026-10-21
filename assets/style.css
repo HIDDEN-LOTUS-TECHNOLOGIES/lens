@@ -56,6 +56,14 @@ pre .c{color:var(--mut)}
 .card .foot{margin-top:auto;font:400 .8125rem var(--mono);color:var(--mut)}
 .combine{margin:2.5rem 0 0;max-width:44rem}
 .support{font:400 .875rem var(--mono);color:var(--mut);margin-top:1.5rem}
+.card.pending{overflow:hidden}
+.pending-sketch{display:flex;flex-direction:column;flex:1;filter:blur(7px);opacity:.42;user-select:none;pointer-events:none;transform:scale(1.02)}
+.pending-mark{position:absolute;inset:0;z-index:1;display:flex;align-items:center;justify-content:center;margin:0;background:rgba(10,10,10,.28)}
+.pending-mark span{font:700 .75rem/1 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc);padding:.4rem .7rem;background:rgba(10,10,10,.82)}
+@media (prefers-reduced-transparency:reduce), (prefers-reduced-motion:reduce){
+  .pending-sketch{filter:none;opacity:0}
+  .pending-mark{background:var(--bg)}
+}
 details{border-top:1px solid var(--line);padding:1.25rem 0}
 details:last-of-type{border-bottom:1px solid var(--line)}
 summary{cursor:pointer;font:600 1.125rem var(--sans);list-style:none;display:flex;justify-content:space-between;gap:1rem}

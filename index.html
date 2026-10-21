@@ -19,7 +19,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/jost-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=free1">
 <link rel="stylesheet" href="assets/hero-underlay.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
   <a class="mark" href="https://hiddenlotus.tech" aria-label="Hidden Lotus Tech home">
     <img src="assets/img/hlt-monogram-white.png" alt="" width="28" height="28"><span>Hidden Lotus Tech</span>
   </a>
-  <nav aria-label="Sections"><a href="#what">What</a><a href="#install">Install</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
+  <nav aria-label="Sections"><a href="#what">What</a><a href="#install">Install</a><a href="#pricing">Free</a><a href="#faq">FAQ</a></nav>
 </header>
 
 <main id="main">
@@ -100,26 +100,33 @@ lotus-lens doctor   <span class="c"># checks your log, Detailed Logs setting and
 </section>
 
 <section id="pricing" aria-labelledby="price-h">
-  <h2 id="price-h">Pricing <span class="soon">Coming soon</span></h2>
+  <h2 id="price-h">Free</h2>
+  <p class="big">The full app is free, open source, and stays that way.</p>
   <div class="cards">
     <article class="card p-1" aria-labelledby="p1">
       <h3 id="p1">Free</h3><p class="price">$0</p><p class="who">For everyone. Forever. Open source.</p>
       <ul><li>The full app: draft, build, play, debrief</li><li>MCP for your own AI (Claude, Cursor, Ollama)</li><li>No ads, no account</li></ul>
       <p class="foot">npx lotus-lens</p>
     </article>
-    <article class="card p-2" aria-labelledby="p2">
-      <h3 id="p2">Edition</h3><p class="price">~$12</p><p class="who">For players who want it to just work. Pay once, own it.</p>
-      <ul><li>One-click installer</li><li>Automatic app and set updates</li><li>Extras, plus starter coach credits</li><li>No subscription, no DRM</li></ul>
-      <p class="foot">Same open source, packaged for you</p>
+    <article class="card p-2 pending" aria-label="Possible extra, not decided">
+      <p class="pending-mark"><span>Unset</span></p>
+      <div class="pending-sketch" aria-hidden="true">
+        <h3>Edition</h3><p class="price">—</p><p class="who">A packaged build, if we ever make one.</p>
+        <ul><li>One-click installer</li><li>Automatic app and set updates</li><li>Convenience extras</li></ul>
+        <p class="foot">Optional. Not a plan.</p>
+      </div>
     </article>
-    <article class="card p-3" aria-labelledby="p3">
-      <h3 id="p3">Coach credits</h3><p class="price">from $5</p><p class="who">For players who want an AI coach without any setup.</p>
-      <ul><li>Hosted coach for drafts, builds and reviews</li><li>Pay as you go, credits don't expire</li><li>Works with the free app too</li></ul>
-      <p class="foot">Optional. Your own AI stays free.</p>
+    <article class="card p-3 pending" aria-label="Possible extra, not decided">
+      <p class="pending-mark"><span>Unset</span></p>
+      <div class="pending-sketch" aria-hidden="true">
+        <h3>Hosted coach</h3><p class="price">—</p><p class="who">A hosted AI coach, if we ever run one.</p>
+        <ul><li>Drafts, builds and reviews</li><li>Pay as you go, if at all</li><li>Your own AI stays free</li></ul>
+        <p class="foot">Optional. Not a plan.</p>
+      </div>
     </article>
   </div>
-  <p class="combine">Everything starts free. The Edition makes it effortless. Credits add a coach. Use any mix.</p>
-  <p class="support"><a href="#why">Support the project ♥</a> <span class="mut">(coming soon)</span></p>
+  <p class="combine">Nothing to buy to draft, build, play or debrief. Other paths stay open; none of them are committed.</p>
+  <p class="support"><a href="#why">Why it's free</a></p>
 </section>
 
 <section id="why" aria-labelledby="why-h">
@@ -128,7 +135,7 @@ lotus-lens doctor   <span class="c"># checks your log, Detailed Logs setting and
   <div class="grid">
     <div><h3>Fan content</h3><p>Lotus Lens is unofficial fan content. Wizards' Fan Content Policy asks that it stay free to access, and it will.</p></div>
     <div><h3>Open source</h3><p>The code is MIT-licensed. You can read it, build it and run it yourself.</p></div>
-    <div><h3>What money pays for</h3><p>Optional convenience (installers, auto-updates), AI compute for the hosted coach, set-data upkeep and hosting.</p></div>
+    <div><h3>If we ever charge</h3><p>Only for optional convenience or compute — never the analysis. Nothing is locked in.</p></div>
   </div>
 </section>
 
