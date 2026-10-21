@@ -6,20 +6,22 @@
 <title>Lotus Lens: open-source MTG Arena draft copilot</title>
 <meta name="description" content="Lotus Lens is a free, open-source, local-first copilot for MTG Arena Limited: draft, build, play and debrief. Reads your Player.log read-only. Bring your own AI via MCP.">
 <meta name="theme-color" content="#0a0a0a">
+<meta name="robots" content="noindex,nofollow">
 <link rel="canonical" href="https://lens.hiddenlotus.tech/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Lotus Lens: open-source MTG Arena draft copilot">
 <meta property="og:description" content="Draft, build, play, debrief. Local-first. Bring your own AI. By Hidden Lotus Tech.">
 <meta property="og:url" content="https://lens.hiddenlotus.tech/">
-<meta property="og:image" content="https://lens.hiddenlotus.tech/og.jpg">
+<meta property="og:image" content="https://lens.hiddenlotus.tech/og.jpg?v=loupe">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@hiddenlotustech">
+<meta name="twitter:site" content="@HIDDENLOTUSTECH">
+<meta name="twitter:image" content="https://lens.hiddenlotus.tech/og.jpg?v=loupe">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/jost-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/style.css?v=free1">
+<link rel="stylesheet" href="assets/style.css?v=share1">
 <link rel="stylesheet" href="assets/hero-underlay.css">
 </head>
 <body>
@@ -29,7 +31,7 @@
   <a class="mark" href="https://hiddenlotus.tech" aria-label="Hidden Lotus Tech home">
     <img src="assets/img/hlt-monogram-white.png" alt="" width="28" height="28"><span>Hidden Lotus Tech</span>
   </a>
-  <nav aria-label="Sections"><a href="#what">What</a><a href="#install">Install</a><a href="#pricing">Free</a><a href="#faq">FAQ</a></nav>
+  <nav aria-label="Sections"><a href="#what">What</a><a href="#install">Install</a><a href="#pricing">Free</a><a href="#faq">FAQ</a><a href="https://x.com/HIDDENLOTUSTECH">X</a></nav>
 </header>
 
 <main id="main">
@@ -68,7 +70,7 @@
     <figure class="pane">
       <figcaption><span class="tag">Build</span> Pilot brief · mana curve</figcaption>
       <div class="pane-frame">
-        <img src="assets/img/demo-pilot.png" alt="Pilot brief: mana curve histogram and deck composition" width="862" height="485" loading="lazy" decoding="async">
+        <img src="assets/img/demo-pilot.png?v=ll1" alt="Pilot brief: mana curve histogram and deck composition" width="862" height="485" loading="lazy" decoding="async">
       </div>
     </figure>
     <figure class="pane">
@@ -82,21 +84,10 @@
 
 <section id="install" class="inst" aria-labelledby="inst-h">
   <h2 id="inst-h">Install <span class="soon">Coming soon</span></h2>
-  <p class="mut">Not released yet. The commands below are placeholders and will not work until launch.</p>
-  <h3>Any OS (Node.js 22+)</h3>
-<pre><code>npx lotus-lens</code></pre>
-  <h3>Windows: two commands</h3>
-<pre><code>winget install OpenJS.NodeJS.LTS
-npm install -g lotus-lens</code></pre>
-  <h3>Windows: Scoop</h3>
-<pre><code>scoop bucket add hlt https://github.com/&lt;owner&gt;/scoop-bucket
-scoop install lotus-lens</code></pre>
-  <h3>macOS: Homebrew</h3>
-<pre><code>brew install &lt;owner&gt;/tap/lotus-lens</code></pre>
-  <h3>macOS / Linux</h3>
-<pre><code>npm install -g lotus-lens
-lotus-lens doctor   <span class="c"># checks your log, Detailed Logs setting and data</span></code></pre>
-  <p class="mut">First run: in Arena, turn on Options → Account → "Detailed Logs (Plugin Support)", then restart Arena.</p>
+  <p class="big">Not released yet.</p>
+  <p>Lotus Lens isn't installable yet. When it is, the commands will live here — nothing to copy in the meantime.</p>
+  <p class="cta follow"><a class="btn" href="https://x.com/HIDDENLOTUSTECH">Follow @HIDDENLOTUSTECH</a></p>
+  <p class="mut">When it ships: in Arena, turn on Options → Account → "Detailed Logs (Plugin Support)", then restart Arena.</p>
 </section>
 
 <section id="pricing" aria-labelledby="price-h">
@@ -106,26 +97,10 @@ lotus-lens doctor   <span class="c"># checks your log, Detailed Logs setting and
     <article class="card p-1" aria-labelledby="p1">
       <h3 id="p1">Free</h3><p class="price">$0</p><p class="who">For everyone. Forever. Open source.</p>
       <ul><li>The full app: draft, build, play, debrief</li><li>MCP for your own AI (Claude, Cursor, Ollama)</li><li>No ads, no account</li></ul>
-      <p class="foot">npx lotus-lens</p>
-    </article>
-    <article class="card p-2 pending" aria-label="Possible extra, not decided">
-      <p class="pending-mark"><span>Unset</span></p>
-      <div class="pending-sketch" aria-hidden="true">
-        <h3>Edition</h3><p class="price">—</p><p class="who">A packaged build, if we ever make one.</p>
-        <ul><li>One-click installer</li><li>Automatic app and set updates</li><li>Convenience extras</li></ul>
-        <p class="foot">Optional. Not a plan.</p>
-      </div>
-    </article>
-    <article class="card p-3 pending" aria-label="Possible extra, not decided">
-      <p class="pending-mark"><span>Unset</span></p>
-      <div class="pending-sketch" aria-hidden="true">
-        <h3>Hosted coach</h3><p class="price">—</p><p class="who">A hosted AI coach, if we ever run one.</p>
-        <ul><li>Drafts, builds and reviews</li><li>Pay as you go, if at all</li><li>Your own AI stays free</li></ul>
-        <p class="foot">Optional. Not a plan.</p>
-      </div>
+      <p class="foot">No account needed</p>
     </article>
   </div>
-  <p class="combine">Nothing to buy to draft, build, play or debrief. Other paths stay open; none of them are committed.</p>
+  <p class="combine">Nothing to buy to draft, build, play or debrief.</p>
   <p class="support"><a href="#why">Why it's free</a></p>
 </section>
 
@@ -134,7 +109,7 @@ lotus-lens doctor   <span class="c"># checks your log, Detailed Logs setting and
   <p class="big">Every card and analysis feature stays free, for good.</p>
   <div class="grid">
     <div><h3>Fan content</h3><p>Lotus Lens is unofficial fan content. Wizards' Fan Content Policy asks that it stay free to access, and it will.</p></div>
-    <div><h3>Open source</h3><p>The code is MIT-licensed. You can read it, build it and run it yourself.</p></div>
+    <div><h3>Open source</h3><p>The code is open source. You can read it, build it and run it yourself.</p></div>
     <div><h3>If we ever charge</h3><p>Only for optional convenience or compute — never the analysis. Nothing is locked in.</p></div>
   </div>
 </section>
@@ -156,8 +131,8 @@ lotus-lens doctor   <span class="c"># checks your log, Detailed Logs setting and
       <p>Lotus Lens is unofficial Fan Content permitted under the <a href="https://company.wizards.com/en/legal/fancontentpolicy">Fan Content Policy</a>. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.</p>
       <p>Card ratings use data from <a href="https://www.17lands.com/public_datasets">17Lands</a>, licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. 17Lands is not affiliated with and does not endorse Lotus Lens.</p>
       <p>Card data from <a href="https://scryfall.com">Scryfall</a>. Not affiliated with or endorsed by Scryfall.</p>
-      <p>Code: MIT. No trackers on this page.</p>
-      <p><a href="https://hiddenlotus.tech">A Hidden Lotus Tech lab project</a></p>
+      <p>Open source. No trackers on this page.</p>
+      <p><a href="https://x.com/HIDDENLOTUSTECH">@HIDDENLOTUSTECH</a> · <a href="https://hiddenlotus.tech">A Hidden Lotus Tech lab project</a></p>
     </div>
     <img src="assets/img/hlt-logo-wordmark-white.png" alt="Hidden Lotus Technologies" width="96" height="99" loading="lazy">
   </div>

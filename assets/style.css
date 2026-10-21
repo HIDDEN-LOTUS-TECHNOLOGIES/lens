@@ -47,6 +47,8 @@ code,pre{font-family:var(--mono)}
 pre{background:#111;border:1px solid var(--line);padding:1rem 1.25rem;overflow-x:auto;margin:.5rem 0 1.75rem;font-size:.9375rem;color:#d8d8d8}
 pre .c{color:var(--mut)}
 .inst h3{font-size:1.0625rem;margin-top:1.5rem}
+.inst .follow{margin:1.5rem 0 2rem}
+#pricing .cards{max-width:22rem}
 .cards{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
 .card{border:1px solid var(--line);padding:2rem 1.75rem;display:flex;flex-direction:column}
 .card .price{font:800 2.25rem/1 var(--sans);margin:1rem 0 .25rem}
